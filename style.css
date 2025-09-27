@@ -193,7 +193,7 @@
   display: grid;
   gap: 25px;
   max-width: 1000px;            /* matches trainer-card width */
-  margin: 30px auto 60px auto;  /* space above & below */
+  margin-top: 10px; /* space above & below */
 }
 
 .about-cards .experience-card {
