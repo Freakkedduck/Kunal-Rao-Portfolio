@@ -1,15 +1,5 @@
 const portfolioData = {
-    "personal": {
-      "name": "Kunal Rao",
-      "title": "Data Analytics & AI Enthusiast",
-      "subtitle": "Engineering Grad passionate about Data!",
-      "email": "kunalrao438@gmail.com",
-      "phone": "+91-7742600767",
-      "location": "Gurgaon, Haryana",
-      "github": "https://github.com/Freakkedduck",
-      "linkedin": "https://linkedin.com/in/kunalrao01/",
-      "bio": "Passionate about transforming data into actionable insights through machine learning and analytics. Currently pursuing B.E. in Electrical & Computer Engineering with a focus on data science and AI applications."
-    },
+    
     "projects": [
     {
       "title": "Customer Churn Prediction & Analytics Dashboard",
