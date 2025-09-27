@@ -54,7 +54,7 @@
 }
 
 .main-content::-webkit-scrollbar-track {
-    background: #faf600; /* black track */
+    background: #000000; /* black track */
 }
 
 .main-content::-webkit-scrollbar-thumb {
