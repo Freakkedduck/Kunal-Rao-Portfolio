@@ -42,10 +42,44 @@
     z-index: 1000; 
   }
   .main-content {
-  margin-left: 240px; /* same as sidebar width + some gap */
-  padding: 1.5rem 2rem;
-  overflow-y: auto;
+    margin-left: 220px;   /* leave space for sidebar */
+    padding: 1.5rem 2rem;
+    height: 100vh;        /* fill viewport height */
+    overflow-y: auto;     /* scrollable */
+    background: #f6f2e8;  /* optional, match your page background */
 }
+/* Custom scrollbar for Webkit browsers */
+.main-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #000; /* black track */
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #444; /* thumb color */
+    border-radius: 6px;
+    border: 3px solid #000; /* spacing around thumb */
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+/* For Firefox */
+.main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
+}
+
+
+/* For Firefox */
+.main-content {
+    scrollbar-width: thin;       /* "auto" or "thin" */
+    scrollbar-color: #444 #000;  /* thumb and track */
+}
+
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
