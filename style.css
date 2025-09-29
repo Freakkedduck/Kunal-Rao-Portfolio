@@ -28,21 +28,20 @@
     opacity: 1;
   }
   
-  /* Sidebar */
+
   .sidebar {
     width: 220px;
     background: #cfe8de;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;      /* full viewport height */
     overflow-y: auto;   /* scroll if sidebar content overflows */
     z-index: 1000; 
-  }
+  } 
   .main-content {
     margin-left: 220px;   /* leave space for sidebar */
     padding: 1.5rem 2rem;
