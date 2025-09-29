@@ -5,10 +5,7 @@
     box-sizing: border-box;
   }
 
-  /* Enable smooth scrolling for the whole page */
-html {
-  scroll-behavior: smooth;
-}
+
 
   body {
     font-family: "IBM Plex Mono", monospace;
