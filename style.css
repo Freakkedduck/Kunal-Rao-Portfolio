@@ -482,10 +482,10 @@
     color: #222;
     font-weight: 600;
   }
-  .more-projects {
-  margin-bottom: 2rem;  
+  .more-projects { 
   margin-top: 2rem;    /* space below the text */
   text-align: center;
+  margin-bottom: -2rem;
 }
 .more-projects .fa-github {
   font-size: 2rem;        /* make the GitHub logo larger */
@@ -496,7 +496,7 @@
 /* ========= SKILLS SECTION ========= */
 .skills {
     padding: 3rem 1rem;
-    background: #f9fafc; /* light background to separate from other sections */
+     /* light background to separate from other sections */
   }
   
   .skills .section-header {
