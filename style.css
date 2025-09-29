@@ -482,6 +482,16 @@
     color: #222;
     font-weight: 600;
   }
+  .more-projects {
+  margin-bottom: 2rem;  
+  margin-top: 2rem;    /* space below the text */
+  text-align: center;
+}
+.more-projects .fa-github {
+  font-size: 2rem;        /* make the GitHub logo larger */
+}
+
+
   
 /* ========= SKILLS SECTION ========= */
 .skills {

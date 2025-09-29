@@ -23,7 +23,7 @@
       <nav class="nav-links">
         <a href="#About" class="nav-item active">About</a>
         <a href="#Experience" class="nav-item">Experience</a>
-        <a href="#" class="nav-item">Featured Projects</a>
+        <a href="#projects" class="nav-item">Featured Projects</a>
         <a href="#" class="nav-item">Skills</a>
         <a href="#" class="nav-item">Education</a>
       </nav>
@@ -105,7 +105,7 @@
 </section>
 <!-- --------------------------------Work Experience Section ----------------------------------------------------->
 <section id="Experience" class="work-experience">
-  <h2>Work Experience</h2>
+  <h2>Experience</h2>
 
   <div class="experience-list">
     
@@ -119,6 +119,17 @@
         <li>Reduced debugging time by 40% and identified critical failure patterns.</li>
         <li>Improved software quality metrics by 20% through data-driven recommendations.</li>
       </ul>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Pandas</span>
+        <span class="tech-tag">SQLite</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag">AI/ML</span>
+        <span class="tech-tag">PyTest</span>
+        <span class="tech-tag">Git</span>
+      </div>
     </div>
 
     <!-- Experience Card 2 -->
@@ -130,6 +141,13 @@
         <li>Managed project timeline and delegated tasks across technical and design teams.</li>
         <li>Ensured timely delivery of key milestones through agile project management.</li>
       </ul>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack">
+        <span class="tech-tag">Unity 3D</span>
+        <span class="tech-tag">VR</span>
+        <span class="tech-tag">Agile</span>
+      </div>
     </div>
 
     <!-- Experience Card 3 -->
@@ -138,12 +156,48 @@
       <p class="company">Self-Employed | Jan 2022 - Dec 2022</p>
       <p>Delivered BI dashboards for clients.</p>
       <ul>
-        <li>Developed 10+ dasboards for clients in Real-Estate domain.</li>
+        <li>Developed 10+ dashboards for clients in the Real Estate domain.</li>
         <li>Helped in inventory optimization.</li>
       </ul>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack">
+        <span class="tech-tag">Power BI</span>
+        <span class="tech-tag">Excel</span>
+        <span class="tech-tag">SQL</span>
+      </div>
     </div>
 
   </div>
+</section>
+
+<!-- =========================
+      Projects Section
+========================= -->
+<section id="projects" class="projects-section work-experience">
+  <h2>Projects</h2>
+
+  <!-- Filter Buttons -->
+  <div class="projects-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+    <button class="filter-btn" data-filter="Data Analytics">Data Analytics</button>
+    <button class="filter-btn" data-filter="Full-Stack Development">Full-Stack Development</button>
+    <button class="filter-btn" data-filter="Financial Analytics">Financial Analytics</button>
+  </div>
+
+  <!-- Projects Grid (JS will fill this) -->
+  <div class="projects-grid" id="projectsGrid">
+    <!-- Project cards will be dynamically injected here by app.js -->
+  </div>
+ <p class="more-projects">
+  Checkout more projects on
+  <a href="https://github.com/Freakkedduck" target="_blank" class="social-icon" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+</p>
+
+
 </section>
 
 
