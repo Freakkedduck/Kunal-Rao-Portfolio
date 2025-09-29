@@ -5,7 +5,7 @@ const portfolioData = {
       "title": "Customer Churn Prediction & Analytics Dashboard",
       "description": "Built predictive analytics model using Random Forest achieving 96% accuracy on 667 telecom customer records",
       "technologies": ["Python", "Streamlit", "Plotly", "Pandas", "NumPy", "Random Forest"],
-      "github": "https://github.com/Freakkedduck/customer-churn-prediction",
+      "github": "https://github.com/Freakkedduck/Churn-Analysis",
       "demo": "https://freakkedduck-churn-analysis-churn-dashboard-9b0zt4.streamlit.app/",
       // "achievements": [
       //   "Identified 80 high-risk customers",
