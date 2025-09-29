@@ -42,7 +42,7 @@ const portfolioData = {
       "title": "Movie Recommendation Data Analysis",
       "description": "Analyzed 9,000 movies and 100,000+ user ratings using K-Nearest Neighbors algorithm for collaborative filtering",
       "technologies": ["Python", "Pandas", "Matplotlib", "KNN", "Scikit-learn"],
-      "github": "https://github.com/Freakkedduck/movie-recommendation",
+      "github": "https://github.com/Freakkedduck/Movie-Recommendation-Analysis",
       // "achievements": [
       //   "Comprehensive data preprocessing and statistical analysis",
       //   "Exploratory data analysis on user behavior patterns",
