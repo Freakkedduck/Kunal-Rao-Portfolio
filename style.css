@@ -568,9 +568,9 @@
   }
   
   /* ========= EDUCATION SECTION ========= */
-  .education {
+  /* .education {
     padding: 3rem 1rem;
-    background: #ffffff;
+    
   }
   
   .education .section-header {
@@ -611,6 +611,7 @@
     color: #222;
     border-bottom: 2px solid #f1c40f;
     padding-bottom: 0.5rem;
+    text-align: center;
   }
   
   .education-list,
@@ -627,7 +628,86 @@
     border-radius: 6px;
     border-left: 4px solid #f1c40f;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
+  } */
+/* ========= EDUCATION SECTION - CARD STYLE ========= */
+.education {
+    padding: 3rem 1rem;
+    
+    /* matches the general site light background */
+}
+
+.education .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+
+.education .section-header h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.education .section-header h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f1c40f; /* yellow accent */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.education-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.education-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.education-card h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #222;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 0.5rem;
+}
+
+.education-card p.institute {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 0.3rem;
+}
+
+.education-card p.duration {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 0.8rem;
+}
+
+.education-card p.details {
+    color: #000;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
   
   /* ========= FOOTER ========= */
   .footer {
