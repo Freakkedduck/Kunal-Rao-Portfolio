@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   
   body {
     font-family: "IBM Plex Mono", monospace;
@@ -711,8 +712,8 @@
   
   /* ========= FOOTER ========= */
   .footer {
-    background: #222;
-    color: #ddd;
+    background: #f6f2e8;
+    color: #000000;
     padding: 3rem 1rem 1rem;
   }
   
@@ -740,7 +741,7 @@
   }
   
   .footer-social-link {
-    color: #ddd;
+    color: #000000;
     text-decoration: none;
     margin-right: 1rem;
     font-size: 0.95rem;
@@ -764,7 +765,7 @@
   .footer-links a,
   .footer-links span {
     text-decoration: none;
-    color: #ddd;
+    color: #000000;
     font-size: 0.95rem;
     transition: color 0.3s;
   }
@@ -784,6 +785,6 @@
     margin-top: 2rem;
     padding-top: 1rem;
     font-size: 0.85rem;
-    color: #aaa;
+    color: #000000;
   }
   
