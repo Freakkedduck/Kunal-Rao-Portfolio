@@ -150,5 +150,32 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
+    // Hamburger menu toggle for mobile/tablet
+    const navToggle = document.getElementById("navToggle");
+    const navDropdown = document.getElementById("navDropdown");
+    // Close dropdown on link click
+    function closeDropdown() {
+      navDropdown.classList.remove("open");
+    }
+    if (navToggle && navDropdown) {
+      navToggle.addEventListener("click", () => {
+        navDropdown.classList.toggle("open");
+      });
+      // Close dropdown when a nav item is clicked
+      navDropdown.querySelectorAll(".nav-item").forEach(link => {
+        link.addEventListener("click", closeDropdown);
+      });
+      // Optional: close dropdown on outside click
+      document.addEventListener("click", (e) => {
+        if (
+          navDropdown.classList.contains("open") &&
+          !navDropdown.contains(e.target) &&
+          e.target !== navToggle
+        ) {
+          closeDropdown();
+        }
+      });
+    }
+  
   });
 
