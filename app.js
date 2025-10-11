@@ -99,6 +99,7 @@ const portfolioData = {
   
 document.addEventListener("DOMContentLoaded", () => {
 
+
     const grid = document.getElementById("projectsGrid");
     const filterButtons = document.querySelectorAll(".filter-btn");
   
