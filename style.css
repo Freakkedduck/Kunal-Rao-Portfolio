@@ -1415,4 +1415,9 @@ html, body {
   }
 }
 
+/* Footer social icon size adjustment */
+.footer-social-icon {
+  font-size: 1.5rem; /* Adjust size as needed */
+}
+
 
