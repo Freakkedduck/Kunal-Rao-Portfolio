@@ -123,13 +123,19 @@
   gap: 1.5rem;
   background: #f4c542;         /* yellow theme */
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 0px;
   position: relative;
   overflow: hidden;
   max-width: 1000px;           /* keep same width as other cards */
-  margin: 20px auto;     /* center horizontally + top/bottom space */
+  margin: 20px auto;           /* center horizontally + top/bottom space */
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+  /* Add black border with different thickness */
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 2px 2px 2px; /* top right bottom left */
 }
+
 
 /* Trainer image */
 .trainer-img {
@@ -228,7 +234,10 @@
   display: grid;
   gap: 25px;
   max-width: 1000px;            /* matches trainer-card width */
-  margin-top: 10px; /* space above & below */
+  margin-top: 10px;
+  border-radius: 0px;
+   /* space above & below */
+  
 }
 
 .about-cards .experience-card {
@@ -238,11 +247,14 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 2px 2px 2px;
 }
 
 .about-cards .experience-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(1,1,1,1);
 }
 
 .about-cards .experience-card h3 {
@@ -300,11 +312,14 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
   }
   
   .experience-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(1,1,1,1);
   }
   
   /* Job title */
@@ -390,12 +405,15 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
   }
   
   /* Hover effect */
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(1,1,1,1);
   }
   
   /* Project Title */
@@ -430,22 +448,40 @@
   /* Project Links */
   .project-card .project-links {
     margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
   .project-card .project-links a {
     text-decoration: none;
-    color: #fff;
-    background: #222;
-    padding: 6px 12px;
+    background: none;
+    color: #222;
+    padding: 0;
     border-radius: 6px;
-    margin-right: 8px;
-    font-size: 0.85rem;
-    transition: background 0.3s;
+    margin-right: 0;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s, background 0.3s;
   }
   
   .project-card .project-links a:hover {
-    background: #ffb400; /* accent color on hover */
-    color: #222;
+    color: #000000;
+    background: none;
+  }
+  
+  .project-card .project-links img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 2px;
+    transition: filter 0.3s;
+  }
+  
+  .project-card .project-links a:hover img {
+    filter: brightness(0.7) sepia(1) hue-rotate(20deg) saturate(5);
   }
   /* -----------------------
    Project Filter Buttons
@@ -531,11 +567,14 @@
     padding: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
   }
   
   .skills-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 14px rgba(1, 1, 1, 1);
   }
   
   .skills-category h3 {
@@ -554,12 +593,15 @@
   
   .skills-list span {
     background: #f1f3f5;
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
     color: #333;
     border: 1px solid #ddd;
     transition: background 0.3s;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 1px 1px 1px;
   }
   
   .skills-list span:hover {
@@ -613,11 +655,14 @@
     padding: 1.5rem;
     box-shadow: 0 6px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
 }
 
 .education-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(1,1,1,1);
 }
 
 .education-card h3 {

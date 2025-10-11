@@ -116,8 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${project.description}</p>
             <div class="tech-icons">${project.tech_icons.join(" ")}</div>
             <div class="project-links">
-              ${project.github ? `<a href="${project.github}" target="_blank">GitHub</a>` : ""}
-              ${project.demo ? `<a href="${project.demo}" target="_blank">Demo</a>` : ""}
+              ${project.github ? `<a href="${project.github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>` : ""}
+              ${project.demo ? `<a href="${project.demo}" target="_blank" title="Open Demo"><img src="media/open_link_new_tab.png" alt="Open Demo" style="width:20px; height:20px; vertical-align:middle;"></a>` : ""}
             </div>
           `;
   
