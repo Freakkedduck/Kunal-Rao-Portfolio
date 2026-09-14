@@ -1,182 +1,118 @@
-const portfolioData = {
-    
-    "projects": [
-    {
-      "title": "Customer Churn Prediction & Analytics Dashboard",
-      "description": "Built predictive analytics model using Random Forest achieving 96% accuracy on 667 telecom customer records",
-      "technologies": ["Python", "Streamlit", "Plotly", "Pandas", "NumPy", "Random Forest"],
-      "github": "https://github.com/Freakkedduck/Churn-Analysis",
-      "demo": "https://freakkedduck-churn-analysis-churn-dashboard-9b0zt4.streamlit.app/",
-      // "achievements": [
-      //   "Identified 80 high-risk customers",
-      //   "Discovered 47% churn rate for customers with 4+ service calls",
-      //   "Created interactive BI dashboard for customer risk segmentation"
-      // ],
-      "category": "Data Analytics",
-      "tech_icons": [
-        "<i class='devicon-python-plain colored'></i>",
-        "<i class='devicon-pandas-original colored'></i>",
-        "<i class='devicon-numpy-original colored'></i>",
-        "<i class='devicon-plotly-plain colored'></i>"
-      ]
-    },
-    {
-      "title": "Document Q&A Chatbot (Gari-1)",
-      "description": "Engineered scalable document analysis system processing 75+ file uploads with semantic search and metadata extraction",
-      "technologies": ["Python", "Streamlit", "FastAPI", "ChromaDB", "NLP"],
-      "github": "https://github.com/Freakkedduck/Gari-1",
-      // "achievements": [
-      //   "90% accuracy using advanced text analytics",
-      //   "Citation-backed query responses",
-      //   "Semantic search and information retrieval"
-      // ],
-      "category": "AI/ML",
-      "tech_icons": [
-        "<i class='devicon-python-plain colored'></i>",
-        "<i class='devicon-fastapi-plain colored'></i>",
-        "<i class='devicon-streamlit-plain colored'></i>",
-        "<i class='devicon-pytorch-original colored'></i>"
-      ]
-    },
-    {
-      "title": "Movie Recommendation Data Analysis",
-      "description": "Analyzed 9,000 movies and 100,000+ user ratings using K-Nearest Neighbors algorithm for collaborative filtering",
-      "technologies": ["Python", "Pandas", "Matplotlib", "KNN", "Scikit-learn"],
-      "github": "https://github.com/Freakkedduck/Movie-Recommendation-Analysis",
-      // "achievements": [
-      //   "Comprehensive data preprocessing and statistical analysis",
-      //   "Exploratory data analysis on user behavior patterns",
-      //   "Implemented collaborative filtering recommendation system"
-      // ],
-      "category": "Data Analytics",
-      "tech_icons": [
-        "<i class='devicon-python-plain colored'></i>",
-        "<i class='devicon-pandas-original colored'></i>",
-        "<i class='devicon-matplotlib-plain colored'></i>",
-        "<i class='devicon-scikitlearn-plain colored'></i>"
-      ]
-    },
-    {
-      "title": "Smart Inventory Manager",
-      "description": "Intelligent inventory management system with predictive analytics and automated reordering",
-      "technologies": ["Python", "Machine Learning"],
-      "github": "https://github.com/Freakkedduck/Smart-Inventory-Manager",
-      "demo": "https://freakkedduck-smart-inventory-manager-dashboard-ckyi6k.streamlit.app/",
-      "category": "Full-Stack Development",
-      "tech_icons": [
-        "<i class='devicon-python-plain colored'></i>",
-        "<i class='devicon-tensorflow-original colored'></i>"
-      ]
-    },
-    {
-      "title": "Mental Health Chatbot",
-      "description": "Static web-based demo version for Mental Health Chatbot with NLP capabilities",
-      "technologies": ["Python", "NLP", "Machine Learning", "Web Technologies"],
-      "github": "https://github.com/Freakkedduck/Mental-Health-Chatbot",
-      "category": "AI/ML",
-      "tech_icons": [
-        "<i class='devicon-python-plain colored'></i>",
-        "<i class='devicon-nlp-plain'></i>",
-        "<i class='devicon-tensorflow-original colored'></i>",
-        "<i class='devicon-html5-plain colored'></i>"
-      ]
-    },
-    {
-      "title": "Portfolio Optimization using MPT",
-      "description": "Modern Portfolio Theory implementation for optimal asset allocation and risk management",
-      "technologies": ["Python", "NumPy", "Pandas", "Financial Modeling"],
-      "github": "https://github.com/Freakkedduck/Portfolio-Optimization-using-MPT",
-      "category": "Financial Analytics",
-      "tech_icons": [
-        "<i class='devicon-python-plain colored'></i>",
-        "<i class='devicon-numpy-original colored'></i>",
-        "<i class='devicon-pandas-original colored'></i>",
-        "<i class='devicon-r-original colored'></i>"
-      ]
-    }
-  ]
-}
-  
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const menuButton = document.getElementById('menuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
 
+  const setMenuState = (open) => {
+    mobileMenu.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuButton.textContent = open ? '×' : '☰';
+  };
 
-    const grid = document.getElementById("projectsGrid");
-    const filterButtons = document.querySelectorAll(".filter-btn");
-  
-    // Function to render projects based on a filter
-    function renderProjects(filter = "all") {
-      grid.innerHTML = ""; // Clear current projects
-  
-      portfolioData.projects.forEach(project => {
-        if (filter === "all" || project.category === filter) {
-          const projectCard = document.createElement("div");
-          projectCard.className = "project-card";
-  
-          projectCard.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="tech-icons">${project.tech_icons.join(" ")}</div>
-            <div class="project-links">
-              ${project.github ? `<a href="${project.github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>` : ""}
-              ${project.demo ? `<a href="${project.demo}" target="_blank" title="Open Demo"><img src="media/open_link_new_tab.png" alt="Open Demo" style="width:20px; height:20px; vertical-align:middle;"></a>` : ""}
-            </div>
-          `;
-  
-          grid.appendChild(projectCard);
-        }
-      });
-    }
-  
-    // Initial render: show all projects
-    renderProjects();
-  
-    // Add click events to filter buttons
-    filterButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        // Remove 'active' from all buttons
-        filterButtons.forEach(b => b.classList.remove("active"));
-        // Add 'active' to clicked button
-        btn.classList.add("active");
-  
-        const filter = btn.getAttribute("data-filter");
-        renderProjects(filter);
-      });
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => setMenuState(!mobileMenu.classList.contains('open')));
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuState(false)));
+  }
+
+  const activateGroup = selector => {
+    document.querySelectorAll(selector).forEach(item => {
+      const activate = () => {
+        document.querySelectorAll(selector).forEach(candidate => {
+          const isActive = candidate === item;
+          candidate.classList.toggle('is-active', isActive);
+          candidate.setAttribute('aria-expanded', String(isActive));
+        });
+      };
+      item.addEventListener('mouseenter', activate);
+      item.addEventListener('focus', activate);
+      item.addEventListener('click', activate);
     });
-  
-    // Optional: any other buttons (like "Session request") interactivity
-    const primaryButtons = document.querySelectorAll(".btn.primary");
-    primaryButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        alert("Session request sent!");
-      });
-    });
-  
-    // Hamburger menu toggle for mobile/tablet
-    const navToggle = document.getElementById("navToggle");
-    const navDropdown = document.getElementById("navDropdown");
-    // Close dropdown on link click
-    function closeDropdown() {
-      navDropdown.classList.remove("open");
-    }
-    if (navToggle && navDropdown) {
-      navToggle.addEventListener("click", () => {
-        navDropdown.classList.toggle("open");
-      });
-      // Close dropdown when a nav item is clicked
-      navDropdown.querySelectorAll(".nav-item").forEach(link => {
-        link.addEventListener("click", closeDropdown);
-      });
-      // Optional: close dropdown on outside click
-      document.addEventListener("click", (e) => {
-        if (
-          navDropdown.classList.contains("open") &&
-          !navDropdown.contains(e.target) &&
-          e.target !== navToggle
-        ) {
-          closeDropdown();
-        }
-      });
-    }
-  
-  });
+  };
 
+  activateGroup('.journey-stage');
+  activateGroup('.feature-stage');
+
+  const capabilityList = document.querySelector('.capability-list');
+  if (capabilityList) {
+    capabilityList.querySelectorAll('.capability').forEach(capability => {
+      const focus = () => {
+        capabilityList.classList.add('has-focus');
+        capabilityList.querySelectorAll('.capability').forEach(item => item.classList.toggle('is-active', item === capability));
+      };
+      capability.addEventListener('mouseenter', focus);
+      capability.addEventListener('focusin', focus);
+    });
+    capabilityList.addEventListener('mouseleave', () => {
+      capabilityList.classList.remove('has-focus');
+      capabilityList.querySelectorAll('.capability').forEach(item => item.classList.remove('is-active'));
+    });
+  }
+
+  const heroWord = document.getElementById('heroWord');
+  if (heroWord && !reducedMotion) {
+    const words = ['data.', 'insight.', 'decisions.', 'action.'];
+    let wordIndex = 0;
+    window.setInterval(() => {
+      heroWord.classList.add('is-changing');
+      window.setTimeout(() => {
+        wordIndex = (wordIndex + 1) % words.length;
+        heroWord.textContent = words[wordIndex];
+        heroWord.classList.remove('is-changing');
+      }, 350);
+    }, 3200);
+  }
+
+  const revealItems = document.querySelectorAll('.section-heading, .story-heading, .journey, .numbers-heading, .metric, .timeline-item, .experience-feature, .project-card, .capability, .education-entry, .cert-list');
+  revealItems.forEach((item, index) => item.classList.add('reveal', `reveal-delay-${Math.min(index % 4, 3)}`));
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  if (reducedMotion) revealItems.forEach(item => item.classList.add('is-visible'));
+  else revealItems.forEach(item => revealObserver.observe(item));
+
+  const metrics = document.querySelectorAll('[data-count]');
+  const countMetric = metric => {
+    const target = Number(metric.dataset.count);
+    const suffix = metric.dataset.suffix || '';
+    if (reducedMotion) {
+      metric.textContent = `${target}${suffix}`;
+      return;
+    }
+    const start = performance.now();
+    const update = now => {
+      const progress = Math.min((now - start) / 900, 1);
+      const value = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+      metric.textContent = `${value}${suffix}`;
+      if (progress < 1) window.requestAnimationFrame(update);
+    };
+    window.requestAnimationFrame(update);
+  };
+  const metricObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        countMetric(entry.target);
+        metricObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  metrics.forEach(metric => metricObserver.observe(metric));
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.desktop-nav a');
+  const progressLinks = document.querySelectorAll('.section-progress a');
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const sectionId = entry.target.id;
+      navLinks.forEach(link => link.classList.toggle('current', link.getAttribute('href') === `#${sectionId}`));
+      progressLinks.forEach(link => link.classList.toggle('current', link.getAttribute('href') === `#${sectionId}`));
+    });
+  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+  sections.forEach(section => sectionObserver.observe(section));
+});
