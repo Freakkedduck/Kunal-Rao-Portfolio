@@ -3,444 +3,254 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Kunal Rao</title>
+  <meta name="description" content="Kunal Rao — Business Analyst with a technology background, focused on business analysis, data, strategy and product execution." />
+  <title>Kunal's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="icon" type="image/x-icon" href="media\favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-
-
+  <link rel="icon" type="image/x-icon" href="media/webicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script defer src="app.js"></script>
 </head>
 <body>
-  
-  <div class="app-container">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kunal Rao home">Kunal Rao</a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Capabilities</a>
+      <a href="#education">Education</a>
+    </nav>
+    <a class="header-contact" href="mailto:kunalrao438@gmail.com">Get in touch <span>↗</span></a>
+    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
 
-  
-    <aside class="sidebar">
-      <h2 class="logo">&lt;/&gt; KR</h2>
-      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#About" class="nav-item active">About</a>
-        <a href="#Experience" class="nav-item">Experience</a>
-        <a href="#projects" class="nav-item">Featured Projects</a>
-        <a href="#skills" class="nav-item">Skills</a>
-        <a href="#education" class="nav-item">Education</a>
-      </nav>
-      <!-- Dropdown menu for mobile/tablet -->
-      <div class="nav-dropdown" id="navDropdown">
-        <a href="#About" class="nav-item">About</a>
-        <a href="#Experience" class="nav-item">Experience</a>
-        <a href="#projects" class="nav-item">Projects</a>
-        <a href="#skills" class="nav-item">Skills</a>
-        <a href="#education" class="nav-item">Education</a>
-      </div>
-    </aside>
-    
-<main class="main-content">
-      <!-- ===================== ABOUT SECTION ===================== -->
-<section id="About" class="section active">
-
-  <!-- Trainer Info Card -->
-  <div class="trainer-card">
-    <img src="media\pfp.png" alt="Trainer Photo" class="trainer-img" />
-
-    <div class="trainer-details">
-      <h2 class="trainer-name">Kunal Rao</h2>
-      <div class="trainer-stats">
-        <div class="stat">
-          <strong>Data Analytics | Machine Learning | Python | SQL</strong>
-        </div>
-      </div>
-
-      <p class="trainer-bio">
-        Passionate about transforming data into actionable insights through Machine Learning and Analytics.
-      </p>
-
-      <!-- Social Icons -->
-      <!-- <div class="social-icons">
-        <a href="https://github.com/Freakkedduck" target="_blank" class="social-icon" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kunalrao01/" target="_blank" class="social-icon" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:kunalrao438@gmail.com" class="social-icon" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.kaggle.com/kunalrao438" 
-                   target="_blank" 
-                   class="social-icon" 
-                   title="Kaggle">
-                   <i class="fab fa-kaggle"></i>
-                </a>
-      </div> -->
-      <!-- Font Awesome -->
-<link rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-  crossorigin="anonymous">
-
-<div class="social-icons">
-  <ul>
-    <li>
-      <a href="https://github.com/Freakkedduck" target="_blank" title="GitHub">
-        <i class="fab fa-github icon"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/kunalrao01/" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin-in icon"></i>
-      </a>
-    </li>
-    <li>
-      <a href="mailto:kunalrao438@gmail.com" title="Email">
-        <i class="fas fa-envelope icon"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.kaggle.com/kunalrao438" target="_blank" title="Kaggle">
-        <i class="fab fa-kaggle icon"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-      <!-- Floating Skill Icons -->
-      <div class="floating-icons">
-        <i class="fab fa-python" title="Python"></i>
-        <i class="fas fa-database" title="SQL"></i>
-        <i class="fas fa-superscript" title="NumPy"></i>
-        <i class="fas fa-table" title="Pandas"></i>
-        <i class="fas fa-stream" title="Streamlit"></i>
-        <i class="fas fa-file-excel" title="Excel"></i>
-      </div>
-    </div>
-  </div>
-  <!-- End Trainer Card -->
-
-  <!-- About Cards -->
-  <div class="about-cards">
-    <!-- Who Am I Card -->
-    <div class="experience-card">
-      <h3>Who Am I?</h3>
-      <p class="company">
-        Hi, I am Kunal, an Electrical and Computer Engineering graduate from Thapar Institute of Engineering and Technology, Patiala. I am passionate about leveraging machine learning algorithms to enable data-driven decision-making. My engineering background provides me with strong analytical and problem-solving skills to develop innovative solutions in data science and machine learning.
-      </p>
-    </div>
-
-    <!-- What Am I Trying To Do Card -->
-    <div class="experience-card">
-      <h3>What Am I Trying To Do?</h3>
-      <p class="company">
-        I'm driven by the power of data to solve real-world problems and create meaningful impact.
-      </p>
-    </div>
-  </div>
-  <!-- End About Cards -->
-
-</section>
-<!-- --------------------------------Work Experience Section ----------------------------------------------------->
-<section id="Experience" class="work-experience">
-  <h2>Experience</h2>
-
-  <div class="experience-list">
-    
-    <!-- Experience Card 1 -->
-    <div class="experience-card">
-      <h3>R&D Intern</h3>
-      <p class="company">Logic Fruit Technologies | Mar 2025 - Aug 2025</p>
-      <p>Developed an AI-assisted Test Case Generation system that automated requirements analysis, improving documentation accuracy by 35% and analyst productivity by 25%.</p>
-      <ul>
-        <li>Implemented a real-time KPI dashboard using Python, Pandas, SQLite, and Streamlit.</li>
-        <li>Reduced debugging time by 40% and identified critical failure patterns.</li>
-        <li>Improved software quality metrics by 20% through data-driven recommendations.</li>
-      </ul>
-
-      <!-- Tech Stack -->
-      <div class="tech-stack">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Pandas</span>
-        <span class="tech-tag">SQLite</span>
-        <span class="tech-tag">Streamlit</span>
-        <span class="tech-tag">AI/ML</span>
-        <span class="tech-tag">PyTest</span>
-        <span class="tech-tag">Git</span>
-      </div>
-    </div>
-
-    <!-- Experience Card 2 -->
-    <div class="experience-card">
-      <h3>Project Lead</h3>
-      <p class="company">DreamScape Reality (EDS Project) | Jan 2023 - July 2023</p>
-      <p>Led a team of 5 members in developing 'DreamScape Reality,' a virtual reality platform for property tours to revolutionize the real estate industry.</p>
-      <ul>
-        <li>Managed project timeline and delegated tasks across technical and design teams.</li>
-        <li>Ensured timely delivery of key milestones through agile project management.</li>
-      </ul>
-
-      <!-- Tech Stack -->
-      <div class="tech-stack">
-        <span class="tech-tag">Unity 3D</span>
-        <span class="tech-tag">VR</span>
-        <span class="tech-tag">Agile</span>
-      </div>
-    </div>
-
-    <!-- Experience Card 3 -->
-    <div class="experience-card">
-      <h3>Freelancing</h3>
-      <p class="company">Self-Employed | Jan 2022 - Dec 2022</p>
-      <p>Delivered BI dashboards for clients.</p>
-      <ul>
-        <li>Developed 10+ dashboards for clients in the Real Estate domain.</li>
-        <li>Helped in inventory optimization.</li>
-      </ul>
-
-      <!-- Tech Stack -->
-      <div class="tech-stack">
-        <span class="tech-tag">Power BI</span>
-        <span class="tech-tag">Excel</span>
-        <span class="tech-tag">SQL</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
-      Projects Section
-========================= -->
-<section id="projects" class="projects-section work-experience">
-  <h2>Projects</h2>
-
-  <!-- Filter Buttons -->
-  <div class="projects-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
-    <button class="filter-btn" data-filter="Data Analytics">Data Analytics</button>
-    <button class="filter-btn" data-filter="Full-Stack Development">Full-Stack Development</button>
-    <button class="filter-btn" data-filter="Financial Analytics">Financial Analytics</button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#experience">Experience</a>
+    <a href="#projects">Work</a>
+    <a href="#skills">Capabilities</a>
+    <a href="#education">Education</a>
+    <a href="mailto:kunalrao438@gmail.com">Contact</a>
   </div>
 
-  <!-- Projects Grid (JS will fill this) -->
-  <div class="projects-grid" id="projectsGrid">
-    <!-- Project cards will be dynamically injected here by app.js -->
+  <aside class="section-progress" aria-label="Page sections">
+    <a href="#approach"><span>01</span>Approach</a>
+    <a href="#experience"><span>02</span>Experience</a>
+    <a href="#projects"><span>03</span>Work</a>
+    <a href="#skills"><span>04</span>Capabilities</a>
+    <a href="#education"><span>05</span>Education</a>
+    <a href="#next"><span>06</span>Next</a>
+  </aside>
+
+  <main id="top">
+    <section class="hero section-shell">
+  <div class="eyebrow">Business · Data · Intelligence</div>
+
+  <h1>
+    <span class="hero-line">Where business questions</span><br />
+    <span>meet <span class="hero-rotating-word" id="heroWord">data.</span></span>
+  </h1>
+
+  <p class="hero-copy">
+    I understand problems, find meaningful insights,
+    and turn them into decisions that move things forward.
+  </p>
+
+  <div class="hero-actions">
+    <a class="button button-dark" href="#experience">
+      Explore my work <span>↓</span>
+    </a>
+
+    <a class="text-link" href="https://www.linkedin.com/in/kunalrao01/" target="_blank" rel="noreferrer">
+      Let's talk <span>↗</span>
+    </a>
   </div>
- <p class="more-projects">
-  Checkout more projects on
-  <a href="https://github.com/Freakkedduck" target="_blank" class="social-icon" title="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-</p>
-</section>
-<!------------------------------------ ========= SKILLS SECTION ========= ------------------------------>
-<section id="skills" class="skills work-experience">
-  <div class="section-header">
-    <h2>Skills</h2>
-  </div>
+  <a class="scroll-cue" href="#approach">Scroll to explore <span>↓</span></a>
 
-  <div class="skills-content">
-
-    <!-- Programming Languages -->
-    <div class="skills-category">
-      <h3>Programming Languages</h3>
-      <div class="skills-list">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>JavaScript</span>
-        <span>C++</span>
-      </div>
+  <div class="hero-meta">
+    <div>
+      <span>Based in</span>
+      <strong>India</strong>
     </div>
 
-    <!-- Data Analytics -->
-    <div class="skills-category">
-      <h3>Data Analytics</h3>
-      <div class="skills-list">
-        <span>Pandas</span>
-        <span>NumPy</span>
-        <span>Matplotlib</span>
-        <span>Seaborn</span>
-        <span>Plotly</span>
-        <span>Tableau</span>
-      </div>
+    <div>
+      <span>Currently</span>
+      <strong>Business Analyst at <a href="https://orcapod.work/" target="_blank" rel="noreferrer">Orcapod</a> </strong>
     </div>
 
-    <div class="skills-category">
-      <h3>Web Development</h3>
-      <div class="skills-list">
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>React</span>
-        <span>FastAPI</span>
-        <span>Streamlit</span>
-      </div>
-    </div>
-
-    <!-- Machine Learning -->
-    <div class="skills-category">
-      <h3>Machine Learning</h3>
-      <div class="skills-list">
-        <span>Scikit-learn</span>
-        <span>Random Forest</span>
-        <span>KNN</span>
-        <span>Statistical Analysis</span>
-        <span>Predictive Modeling</span>
-      </div>
-    </div>
-
-    <!-- Tools & Platforms -->
-    <div class="skills-category">
-      <h3>Tools & Platforms</h3>
-      <div class="skills-list">
-        <span>Git / GitHub</span>
-        <span>Jupyter Notebooks</span>
-        <span>Streamlit</span>
-        <span>Google Analytics</span>
-        <span>Docker</span>
-      </div>
-    </div>
-
-    <div class="skills-category">
-      <h3>Soft Skills</h3>
-      <div class="skills-list">
-        <span>Agile Project Management</span>
-        <span>Team Collaboration</span>
-        <span>Problem Solving</span>
-        <span>Communication</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!--------------------------- ========= EDUCATION SECTION ========= ----------------------------------------------->
-<section id="education" class="education">
-  <div class="section-header">
-    <h2>Education</h2>
-    <p>Academic background and professional certifications</p>
-  </div>
-
-  <div class="education-columns">
-
-    <!-- Academic Qualifications Card -->
-    <div class="education-card">
-      <h3>Academic Qualifications</h3>
-      <div class="education-list">
-        <div>
-          <strong>Bachelor of Engineering (B.E)</strong><br>Thapar Institute of Engineering & Technology, Patiala<br>
-          Sep 2021 - July 2025<br>
-          CGPA: 8.1/10
-        </div>
-        <br>
-        <div>
-          <strong>Class XII - Science (PCM)</strong><br>
-          Delhi Public School, Rewari<br>March 2020 - May 2021<br>
-          Percentage: 96.4%
-        </div>
-        <br>
-        <div>
-          <strong>Class X</strong><br>
-          Delhi Public School, Rewari<br>March 2020 - May 2021<br>
-          Percentage: 93.4%
-        </div>
-      </div>
-    </div>
-
-    <!-- Certifications Card -->
-    <div class="education-card">
-      <h3>Certifications</h3>
-      <div class="certifications-list">
-        <div>
-          <strong>Summer Analytics 2025</strong> <a href="https://verification.givemycertificate.com/v/668dee0e-059d-46be-b07c-5e5dcb6fd744" target="_blank"><img src="media\open_link_new_tab.png" alt="View Certificate" style="width:20px; height:20px;"></a><br>
-          Issuer: IIT Guwahati<br>
-          
-        </div>
-        <br>
-
-        <div>
-          <strong>BCG Data Science Job Simulation</strong> <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_7Mh2o7N2TN9SvnGFF_1738915431197_completion_certificate.pdf" target="_blank"><img src="media\open_link_new_tab.png" alt="View Certificate" style="width:20px; height:20px;"></a><br>
-          Issuer: BCG<br>
-      
-        </div>
-        <br>
-
-        <div>
-            <strong>Python for Data Science</strong> <a href="https://www.coursera.org/account/accomplishments/verify/7VKP60HXZPRE?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">
-            <img src="media\open_link_new_tab.png" alt="View Certificate" style="width:20px; height:20px;">
-            </a><br>
-            Issuer: IBM<br>
-           
-        </div>
-
-        <br>
-
-        <div>
-          <strong>Google Analytics </strong> <a href="https://skillshop.credential.net/778d59b6-d963-4076-bc86-ec9d99e61739##acc.sSotL4DY" target="_blank"><img src="media\open_link_new_tab.png" alt="View Certificate" style="width:20px; height:20px;"></a><br>
-          Issuer: Google<br>
-         
-        </div>
-      </div>
+    <div>
+      <span>Interested in</span>
+      <strong>Strategy &amp; Business</strong>
     </div>
   </div>
 </section>
 
-<!-- ========= FOOTER ========= -->
-<footer class="footer">
-  <div class="footer-content">
-
-    <!-- About / Description -->
-    <div class="footer-section">
-      <h3>About Me</h3>
-      <p>
-        Data Analytics & AI Enthusiast transforming data into actionable insights through machine 
-        learning and advanced analytics.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-      </ul>
-    </div>
-
-    <!-- Social Media -->
-    <div class="footer-section">
-      <h3>Follow Me</h3>
-      <div class="footer-social">
-        <a href="https://github.com/Freakkedduck" target="_blank" class="footer-social-link" title="GitHub">
-          <i class="fab fa-github footer-social-icon"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kunalrao01/" target="_blank" class="footer-social-link" title="LinkedIn">
-          <i class="fab fa-linkedin-in footer-social-icon"></i>
-        </a>
+    <section id="approach" class="intro section-shell section-divider">
+      <div class="section-kicker">01 / APPROACH</div>
+      <div class="story-heading">
+        <h2>From building systems<br />to understanding <em>business.</em></h2>
+        <p>My work has moved from the mechanics of products to the questions that make them useful.</p>
       </div>
-    </div>
+      <div class="journey" aria-label="Professional journey">
+        <button class="journey-stage is-active" type="button" aria-expanded="true">
+          <span class="journey-index">01</span><span class="journey-title">BUILD</span><span class="journey-label">R&amp;D</span>
+          <span class="journey-description">Understanding how products are built.</span>
+        </button>
+        <button class="journey-stage" type="button" aria-expanded="false">
+          <span class="journey-index">02</span><span class="journey-title">ANALYZE</span><span class="journey-label">Data</span>
+          <span class="journey-description">Finding patterns, signals and problems.</span>
+        </button>
+        <button class="journey-stage" type="button" aria-expanded="false">
+          <span class="journey-index">03</span><span class="journey-title">OPERATE</span><span class="journey-label">Business</span>
+          <span class="journey-description">Working with people, processes and decisions.</span>
+        </button>
+        <button class="journey-stage" type="button" aria-expanded="false">
+          <span class="journey-index">04</span><span class="journey-title">BUILD</span><span class="journey-label">Products & Services</span>
+          <span class="journey-description">Taking an idea toward execution.</span>
+        </button>
+      </div>
+    </section>
 
-    <!-- Contact Info -->
-    <div class="footer-section footer-contact">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:youremail@example.com">kunalrao438@gmail.com</a></p>
-      <p>Location: <span>Gurugram, India</span></p>
-    </div>
+    <section class="numbers section-shell section-divider" aria-labelledby="numbers-title">
+      <div class="section-kicker">THE SIGNAL</div>
+      <div class="numbers-heading"><h2 id="numbers-title">A few things<br /><em>worth measuring.</em></h2><p>Small signals of the work behind the story.</p></div>
+      <div class="numbers-grid">
+        <div class="metric"><strong data-count="10" data-suffix="+">0</strong><span>Verification partners</span></div>
+        <div class="metric"><strong data-count="35" data-suffix="%">0</strong><span>Reduction in manual documentation effort</span></div>
+        <div class="metric"><strong data-count="25" data-suffix="%">0</strong><span>Improvement in analyst productivity</span></div>
+        <div class="metric"><strong data-count="20" data-suffix="%">0</strong><span>Improvement in software quality metrics</span></div>
+      </div>
+    </section>
 
-  </div>
+    <section id="experience" class="section-shell section-divider">
+      <div class="section-heading">
+        <div class="section-kicker">02 / EXPERIENCE</div>
+        <h2>Experience</h2>
+      </div>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    &copy; 2025 Kunal Rao. All Rights Reserved.
-  </div>
-</footer>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">JAN 2026 — PRESENT</div>
+          <div class="timeline-main">
+            <div class="role-line"><h3>Business Analyst</h3><span>Orcapod Consulting Services</span></div>
+            <p>Working across business, operations, technology and external partners to turn business requirements into products, processes and execution.</p>
+            <ul>
+              <li>Work closely with Sales, Operations, Product, Technology and leadership on business requirements, product enhancements and process improvements.</li>
+              <li>Manage onboarding, commercial evaluation and performance monitoring of 10+ verification partners for the Accuverse platform.</li>
+              <li>Develop pricing models, profitability analyses, business proposals and service rate cards to support commercial decisions.</li>
+              <li>Track TAT, revenue, vendor performance and operational efficiency through Excel dashboards and MIS reporting.</li>
+            </ul>
+            <div class="experience-feature">
+              <div class="feature-eyebrow">FEATURED INITIATIVE</div>
+              <h4>Building AccuHealth</h4>
+              <p class="feature-subtitle">Pre-employment health checks · From concept to execution</p>
+              <p>Took end-to-end ownership of developing AccuHealth, a new pre-employment health check service for Accuverse, Orcapod's sister company.</p>
+              <div class="feature-grid" aria-label="AccuHealth journey">
+                <button type="button" class="feature-stage is-active" aria-expanded="true"><span>01</span><strong>Vendors</strong><p>Identifying and developing the partner ecosystem.</p></button>
+                <button type="button" class="feature-stage" aria-expanded="false"><span>02</span><strong>Service Design</strong><p>Developing the health check offerings and packages.</p></button>
+                <button type="button" class="feature-stage" aria-expanded="false"><span>03</span><strong>Technology</strong><p>Translating operational requirements into platform implementation.</p></button>
+                <button type="button" class="feature-stage" aria-expanded="false"><span>04</span><strong>Operations</strong><p>Supporting the process and partner workflow.</p></button>
+                <button type="button" class="feature-stage" aria-expanded="false"><span>05</span><strong>Marketing</strong><p>Supporting positioning and launch activities.</p></button>
+                <button type="button" class="feature-stage" aria-expanded="false"><span>06</span><strong>Launch</strong><p>Helping take the service from concept toward execution.</p></button>
+              </div>
+            </div>
+            <div class="tags"><span>Business Analysis</span><span>Stakeholder Management</span><span>Commercial Strategy</span><span>Business Operations</span><span>UAT</span></div>
+          </div>
+        </article>
 
+        <article class="timeline-item">
+          <div class="timeline-date">MAR 2025 — JUL 2025</div>
+          <div class="timeline-main">
+            <div class="role-line"><h3>R&amp;D Intern</h3><span>Logic Fruit Technologies</span></div>
+            <p>Worked on automation, GUI testing and AI-assisted productivity solutions for software engineering and analysis workflows.</p>
+            <ul>
+              <li>Built an AI-assisted test case generation solution using LangChain, ChromaDB and Llama 3.1.</li>
+              <li>Reduced manual documentation effort by 35% and improved analyst productivity by 25%.</li>
+              <li>Analyzed dashboard data, identified 2 key bottlenecks and presented data-driven recommendations.</li>
+              <li>Contributed to a 20% improvement in software quality metrics.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>LangChain</span><span>ChromaDB</span><span>Pytest</span><span>PyAutoGUI</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    </main>
-  </div>
+    <section id="projects" class="section-shell section-divider">
+      <div class="section-heading work-heading">
+        <div>
+          <div class="section-kicker">03 / SELECTED WORK</div>
+          <h2>Projects</h2>
+        </div>
+        <a class="text-link" href="https://github.com/Freakkedduck" target="_blank" rel="noreferrer">View GitHub <span>↗</span></a>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <div class="project-type">DATA ANALYTICS</div>
+            <h3>Customer Churn Analytics Dashboard</h3>
+            <p>Exploratory analysis of telecom customer data to identify churn drivers, supported by an interactive Streamlit dashboard for customer segmentation and churn monitoring.</p>
+            <div class="tags"><span>Python</span><span>Streamlit</span><span>Plotly</span><span>Pandas</span><span>NumPy</span><span>Statistical Analysis</span></div>
+            <div class="dashboard-preview churn-preview" aria-hidden="true"><div class="preview-top"><span>CHURN OVERVIEW</span><strong>24.6%</strong></div><div class="preview-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="preview-bottom"><span>HIGH RISK <b>18%</b></span><span>RETENTION <b>76%</b></span></div></div>
+            <a class="project-link" href="https://freakkedduck-churn-analysis-churn-dashboard-9b0zt4.streamlit.app/" target="_blank" rel="noreferrer">View project <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <div class="project-type">BUSINESS INTELLIGENCE</div>
+            <h3>Business Performance Dashboard</h3>
+            <p>An executive dashboard tracking monthly revenue, profitability and operational KPIs, with automated reporting workflows and drill-down views.</p>
+            <div class="dashboard-preview performance-preview" aria-hidden="true"><div class="preview-top"><span>MONTHLY PERFORMANCE</span><strong>ON TRACK</strong></div><div class="preview-line"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="preview-bottom"><span>REVENUE <b>TRACKING</b></span><span>PROFIT <b>MONITORING</b></span></div></div><div class="tags"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-shell section-divider">
+      <div class="section-kicker">04 / CAPABILITIES</div>
+      <div class="capability-grid">
+        <div class="capability-intro"><h2>What I bring<br />to the table.</h2><p>A blend of technical understanding, analytical thinking and business execution.</p></div>
+        <div class="capability-list">
+          <article class="capability"><span>01</span><div><h3>Business</h3><p class="capability-lead">Turning requirements into clear action.</p><div class="skill-tags"><span>Business Analysis</span><span>Requirement Gathering</span><span>Stakeholder Management</span><span>Process Analysis</span><span>User Stories</span><span>Process Mapping</span><span>Gap Analysis</span><span>UAT</span><span>Commercial Analysis</span><span>Business Operations</span></div></div></article>
+          <article class="capability"><span>02</span><div><h3>Data</h3><p class="capability-lead">Finding the signal inside operational detail.</p><div class="skill-tags"><span>SQL</span><span>Excel</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Statistical Analysis</span><span>Exploratory Data Analysis</span><span>KPI Analysis</span><span>MIS Reporting</span></div></div></article>
+          <article class="capability"><span>03</span><div><h3>Intelligence</h3><p class="capability-lead">Making insights easier to see and use.</p><div class="skill-tags"><span>Power BI</span><span>Tableau</span><span>Dashboard Development</span><span>Business Intelligence</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-shell section-divider">
+      <div class="section-kicker">05 / EDUCATION</div>
+      <div class="education-grid">
+        <div>
+          <h2>Education</h2>
+          <div class="education-entry"><span>2021 — 2025</span><h3>Thapar Institute of Engineering and Technology</h3><p>Bachelor of Engineering in Electrical and Computer Engineering</p><strong>CGPA 8.09 / 10</strong></div>
+          <div class="education-entry"><span>2020 — 2021</span><h3>Delhi Public School, Rewari</h3><p>Class XII · CBSE</p><strong>96.4%</strong></div>
+        </div>
+        <div>
+          <h2>Certifications</h2>
+          <div class="cert-list">
+            <div><strong>Summer Analytics 2025</strong><span>IIT Guwahati</span></div>
+            <div><strong>BCG Data Science Job Simulation</strong><span>BCG</span></div>
+            <div><strong>Python for Data Science</strong><span>IBM</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="closing section-shell section-divider">
+      <div class="section-kicker">06 / NEXT</div>
+      <h2>Still <em>curious.</em></h2>
+      <p>Always looking for interesting problems, thoughtful people, and things worth building.</p>
+      <a class="button button-dark" href="mailto:kunalrao438@gmail.com">Start a conversation <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer section-shell">
+    <div><strong>KR</strong><span>© 2026 Kunal Rao</span></div>
+    <div class="footer-links"><a href="mailto:kunalrao438@gmail.com">Email</a><a href="https://www.linkedin.com/in/kunalrao01/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Freakkedduck" target="_blank" rel="noreferrer">GitHub</a></div>
+  </footer>
 </body>
 </html>
